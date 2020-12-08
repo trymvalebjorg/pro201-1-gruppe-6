@@ -74,6 +74,6 @@ function nextVideo() {
         videosPlaying = 0;
     }
     containerVideo.src = "videoer/" + videos[videosPlaying];
-    vidNumOut.innerHTML = (videosPlaying+1) +"/1";
+    vidNumOut.innerHTML = (videosPlaying+1) +"/2";
 }
 
