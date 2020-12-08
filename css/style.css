@@ -1,0 +1,39 @@
+/*------------------------------------------------------------------
+
+[Table of contents] 
+
+1. Root / Colors / Variables
+2. Typography
+3. General Styles
+4. Layouts
+5. Header / Navigation
+7. Menu
+8. Reviews
+X. Media Queries
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[0. Imports, dependencies]
+------------------------------------------------------------------*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'); /* Font Awesome CDN */
+
+:root {
+	--color-primary: #405c6a;
+	--color-secondary: #9fd18b;
+	--color-tertiary: #fff;
+
+	font-size: 62.5%; /* 1rem = 10px */
+}
+
+/*------------------------------------------------------------------
+[2. Typography]
+------------------------------------------------------------------*/
+body {
+}
+
+/*------------------------------------------------------------------
+[X. Media Queries]
+------------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+}
