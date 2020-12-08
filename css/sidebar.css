@@ -1,12 +1,21 @@
 #sidebar{
     display: grid;
-    grid-template-rows: auto auto auto auto;
+    width: 25%;
+    height: 350px;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-row-gap: 2%;
 
 
 }
 
 .sidebar__parts{
-    background-color: blueviolet;
+    background-color: #405c69;
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+}
+
+.sidebar__parts:hover{
+    height: 150px;
 }
 
 #sidebar__battery{
@@ -25,7 +34,16 @@
     grid-row: 4;
 }
 
-#sidebar__led--txt{
-    color: blueviolet;
+.sidebar__parts--txt{
+    color: white;
+    grid-column: 2;
+}
+
+.sidebar__parts--icon{
+    grid-column: 1;
+}
+
+.sidebar__parts--arrow{
+    grid-column: 3;
 }
 
