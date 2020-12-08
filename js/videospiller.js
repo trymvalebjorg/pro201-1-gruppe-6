@@ -1,11 +1,11 @@
 //HTML-elements
-const containerVideo = document.getElementsById("container__video");
-const btnPlay = document.getElementsById("playButtons__btnPlay");
-const btnPause = document.getElementsById("playButtons__btnPause");
-const btnStop = document.getElementsById("playButtons__btnStop");
-const btnNext = document.getElementsById("playButtons__btnNext");
-const timeOut = document.getElementsById("container__timeOut");
-const vidNumOut = document.getElementsById("container__vidNum");
+const containerVideo = document.getElementById("container__video");
+const btnPlay = document.getElementById("playButtons__btnPlay");
+const btnPause = document.getElementById("playButtons__btnPause");
+const btnStop = document.getElementById("playButtons__btnStop");
+const btnNext = document.getElementById("playButtons__btnNext");
+const timeOut = document.getElementById("container__timeOut");
+const vidNumOut = document.getElementById("container__vidNum");
 
 //Add EventListener
 btnPlay.addEventListener("click" ,vidAction);
@@ -15,7 +15,7 @@ btnNext.addEventListener("click", nextVideo);
 containerVideo.addEventListener("ended", vidEnded);
 
 //Videos-array
-const videos  = ["Meet SunBell Smart!.mp4", "Møt Sunbell Smart!.mp4"];
+const videos  = ["Meet SunBell Smart!.mp4", "Møt Sunbell Smart.mp4"];
 
 //Timer and videos playing
 let timer = null;
@@ -68,12 +68,12 @@ function vidEnded() {
 }
 
 function nextVideo() {
-    if(vidPlaying < videos.length) {
-        vidPlaying++;
+    if(videosPlaying < 1) {
+        videosPlaying++;
     } else {
-        vidPlaying = 0;
+        videosPlaying = 0;
     }
-    containerVideo.src = "videoer/" + videos[vidPlaying];
-    vidNumOut.innerHTML = (vidPlaying+1) +"/2";
+    containerVideo.src = "videoer/" + videos[videosPlaying];
+    vidNumOut.innerHTML = (videosPlaying+1) +"/1";
 }
 
