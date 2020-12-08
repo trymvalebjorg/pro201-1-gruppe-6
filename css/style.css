@@ -7,7 +7,8 @@
 3. General Styles
 4. Layouts
 5. Header / Navigation
-7. Menu
+6. Footer
+7. Buttons
 8. Reviews
 X. Media Queries
 
@@ -22,6 +23,8 @@ X. Media Queries
 	--color-primary: #405c6a;
 	--color-secondary: #9fd18b;
 	--color-tertiary: #fff;
+	--color-fouritary: #94c5bb;
+	--color-error: #d18b8b;
 
 	font-size: 62.5%; /* 1rem = 10px */
 }
@@ -57,7 +60,7 @@ p {
 }
 
 main {
-	height: 80vh;
+	height: calc(100vh - 113px - 0.7rem - 0.7rem);
 }
 
 body {
@@ -75,7 +78,12 @@ body {
 .close {
 	display: none !important;
 }
-
+/*------------------------------------------------------------------
+[4. Layout ]
+------------------------------------------------------------------*/
+main {
+	padding: 0.7rem 2rem; /* Main container */
+}
 /*------------------------------------------------------------------
 [5. Header / Navigation]
 ------------------------------------------------------------------*/
@@ -113,6 +121,75 @@ body {
 
 .nav__exit {
 	display: none;
+}
+
+/*------------------------------------------------------------------
+[6. Footer]
+------------------------------------------------------------------*/
+footer {
+	background-color: var(--color-fouritary);
+	height: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-tertiary);
+}
+
+/*------------------------------------------------------------------
+[7. Buttons]
+------------------------------------------------------------------*/
+
+.btn {
+	border-radius: 50px;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn--medium {
+	padding: 1rem 2rem;
+}
+
+.btn--primary {
+	background-color: var(--color-primary);
+	color: var(--color-tertiary);
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+	background-color: var(--color-primary);
+	filter: brightness(1.2);
+}
+
+.btn--success {
+	background-color: var(--color-secondary);
+	color: var(--color-primary);
+}
+
+.btn--success:hover,
+.btn--success:focus {
+	background-color: var(--color-secondary);
+	filter: brightness(1.2);
+}
+
+.btn--error {
+	background-color: var(--color-error);
+	color: var(--color-tertiary);
+}
+
+.btn--error:hover,
+.btn--error:focus {
+	background-color: var(--color-error);
+	filter: brightness(1.2);
 }
 
 /*------------------------------------------------------------------
