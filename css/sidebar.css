@@ -1,0 +1,31 @@
+#sidebar{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+
+
+}
+
+.sidebar__parts{
+    background-color: blueviolet;
+}
+
+#sidebar__battery{
+    grid-row: 1;
+}
+
+#sidebar__pcb{
+    grid-row: 2;
+}
+
+#sidebar__solarPanel{
+    grid-row: 3;
+}
+
+#sidebar__led{
+    grid-row: 4;
+}
+
+#sidebar__led--txt{
+    color: blueviolet;
+}
+
