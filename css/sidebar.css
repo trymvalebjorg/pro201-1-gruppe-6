@@ -1,9 +1,7 @@
 .sidebar {
 	display: grid;
-	grid-template-rows: auto;
-
-	height: auto;
-	width: 15rem;
+	grid-template-rows: 1fr;
+	text-align: left;
 }
 
 .sidebar__dropdown {
@@ -21,19 +19,23 @@
 	align-items: center;
 	margin-top: 1rem;
 	border-radius: 0.1rem;
-	background-color: var(--color-primary);
+	background-color: #405c69;
 	color: var(--color-tertiary);
 }
 
 .sidebar__parts--txt {
+	grid-column: 2;
 	font-size: 1.2rem;
 }
 
 .sidebar__parts--icon {
+	grid-row: 1;
+	grid-column: 1;
 	margin: 1.5rem;
 	font-size: 2rem;
 }
 
 .sidebar__parts--arrow {
+	grid-column: 3;
 	margin: auto;
 }

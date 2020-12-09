@@ -31,18 +31,58 @@
     </header>
 
     <main class="platform">
-        <!-- <button class="btn btn--medium btn--primary">Button <i class="far fa-arrow-alt-circle-right"></i></button>
-        <br>
-        <button class="btn btn--medium btn--success">Button <i class="far fa-arrow-alt-circle-right"></i></button>
-        <br>
-        <button class="btn btn--medium btn--error">Button <i class="far fa-arrow-alt-circle-right"></i></button> -->
-
         <section class="platform__video">
             <h2>videoplayer</h2>
         </section>
 
         <section class="platform__sidebar">
-            <h2>sidebar</h2>
+            <div id="battery" class="sidebar__parts">
+                <i class="fas fa-car-battery sidebar__parts--icon"></i>
+                <p class="sidebar__parts--txt">Battery <br> Replacement</p>
+                <i class="fas fa-sort-down sidebar__parts--arrow"></i>
+            </div>
+
+            <div id="battery__dropdown" class="sidebar__dropdown">
+                <ul>
+                    <li><a href="#">Battery: step 1</a></li>
+                    <br>
+                    <li><a href="#">Battery: step 2</a></li>
+                    <br>
+                    <li><a href="#">Battery: step 3</a></li>
+                </ul>
+            </div>
+
+            <div id="pcb" class="sidebar__parts">
+                <i class="fas fa-microchip sidebar__parts--icon"></i>
+                <p class="sidebar__parts--txt">PCB <br> Replacement</p>
+                <i class="fas fa-sort-down sidebar__parts--arrow"></i>
+            </div>
+
+            <div id="pcb__dropdown" class="sidebar__dropdown">
+                <ul>
+                    <li><a href="#">PCB: step 1</a></li>
+                    <br>
+                    <li><a href="#">PCB: step 2</a></li>
+                    <br>
+                    <li><a href="#">PCB: step 3</a></li>
+                </ul>
+            </div>
+
+            <div id="solarpanel" class="sidebar__parts">
+                <i class="fas fa-solar-panel sidebar__parts--icon"></i>
+                <p class="sidebar__parts--txt">Solar Panel <br> Replacement</p>
+                <i class="fas fa-sort-down sidebar__parts--arrow"></i>
+            </div>
+
+            <div id="solarpanel__dropdown" class="sidebar__dropdown">
+                <ul>
+                    <li><a href="#">Solar Panel: step 1</a></li>
+                    <br>
+                    <li><a href="#">Solar Panel: step 2</a></li>
+                    <br>
+                    <li><a href="#">Solar Panel: step 3</a></li>
+                </ul>
+            </div>
         </section>
 
 
@@ -53,5 +93,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="/js/sidebar.js"></script>
+
 </body>
 </html>
