@@ -1,91 +1,39 @@
-#sidebar{
-    display: grid;
-    height: auto;
-    width: 15rem;
-    grid-template-rows: 6rem auto 6rem auto 6rem auto 6rem auto;
-    text-align: left;
+.sidebar {
+	display: grid;
+	grid-template-rows: auto;
+
+	height: auto;
+	width: 15rem;
 }
 
-.sidebar__dropdown{
-    height: auto;
-    background-color: #617e8b;
-    display: none;
-    min-width: 160px;
-    z-index: 1;
+.sidebar__dropdown {
+	background-color: #617e8b;
+	display: none;
+	z-index: 1;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+.sidebar__dropdown ul {
+	list-style-type: none;
 }
 
-.dropdown__listStyle{
-    list-style-type: none;
+.sidebar__parts {
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
+	border-radius: 0.1rem;
+	background-color: var(--color-primary);
+	color: var(--color-tertiary);
 }
 
-.sidebar__parts{
-    background-color: #405c69;
-    display: grid;
-    grid-template-columns: 30% 50% 20%;
-    height: auto;
-    margin-top: 1rem;
-    border-radius: 0.1rem;
-    
+.sidebar__parts--txt {
+	font-size: 1.2rem;
 }
 
-#sidebar__battery{
-    grid-row: 1;
+.sidebar__parts--icon {
+	margin: 1.5rem;
+	font-size: 2rem;
 }
 
-#battery__dropdown{
-    grid-row: 2;
-}
-
-.show {
-    display:block;
-
-}
-
-#sidebar__pcb{
-    grid-row: 3;
-}
-
-#pcb__dropdown{
-    grid-row: 4;
-}
-
-#sidebar__solarPanel{
-    grid-row: 5;
-}
-
-#solarPanel__dropdown{
-    grid-row: 6;
-}
-
-#sidebar__led{
-    grid-row: 7;
-}
-
-#led__dropdown{
-    grid-row: 8;
-}
-
-.sidebar__parts--txt{
-    color: white;
-    grid-column: 2;
-    font-size: 1.2rem;
-}
-
-.sidebar__parts--icon{
-    grid-row: 1;
-    grid-column: 1;
-    color: white;
-    margin: 1.5rem auto auto auto;
-    font-size: 2rem;
-}
-
-.sidebar__parts--arrow{
-    grid-column: 3;
-    color: white;
-    margin: auto;
+.sidebar__parts--arrow {
+	margin: auto;
 }

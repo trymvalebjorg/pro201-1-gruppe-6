@@ -1,15 +1,15 @@
-function batteryDropDownContent(){
-    document.getElementById("battery__dropdown").classList.toggle("show");
+const parts = document.querySelectorAll('.sidebar__parts');
+
+function dropdown(id) {
+    let i = document.getElementById(id + '__dropdown');
+    i.classList.toggle('show');   
 }
 
-function pcbDropDownContent(){
-    document.getElementById("pcb__dropdown").classList.toggle("show");
+for (const part of parts) {
+    part.addEventListener('click', () => {
+        const arrow = part.querySelector('.sidebar__parts--arrow');
+        arrow.classList.toggle('flip');
+        dropdown(part.id);
+      });
 }
 
-function solarPanelDropDownContent(){
-    document.getElementById("solarPanel__dropdown").classList.toggle("show");
-}
-
-function ledDropDownContent(){
-    document.getElementById("led__dropdown").classList.toggle("show");
-}
