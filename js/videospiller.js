@@ -26,14 +26,14 @@ let videosPlaying = 0;
 //Functions
 function vidAction(event) {
     switch(event.target.id) {
-        case "btnPlay":
+        case "playButtons__btnPlay":
             playVideo();
             timer = setInterval(update, 100);
             break;
-            case "btnPause":
+            case "playButtons__btnPause":
                 containerVideo.pause();
                 break;
-                case "btnStop":
+                case "playButtons__btnStop":
                     containerVideo.pause();
                     containerVideo.currentTime = 0;
                     break;
