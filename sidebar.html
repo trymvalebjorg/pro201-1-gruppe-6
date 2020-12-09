@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/css/sidebar.css" rel="stylesheet">
+    </head>
+
+    <header>
+    </header>
+    <body>
+
+        <div id="sidebar">
+
+            <div id="sidebar__battery" class="sidebar__parts" onclick="batteryDropDownContent()">
+                <p class="sidebar__parts--txt">Battery Replacement</p>
+                <div class="sidebar__parts--icon">X</div>
+                <div class="sidebar__parts--arrow">V</div>
+            </div>
+            <div id="battery__dropdown" class="sidebar__dropdown">
+                <ul class="dropdown__listStyle">
+                    <li><a href="#">Battery: step 1</a></li>
+                    <br>
+                    <li><a href="#">Battery: step 2</a></li>
+                    <br>
+                    <li><a href="#">Battery: step 3</a></li>
+                </ul>
+            </div>
+            
+            <div id="sidebar__pcb" class="sidebar__parts" onclick="pcbDropDownContent()">
+                <p class="sidebar__parts--txt">PCB Replacement</p>
+                <div class="sidebar__parts--icon">X</div>
+                <div class="sidebar__parts--arrow">V</div>
+            </div>
+            <div id="pcb__dropdown" class="sidebar__dropdown">
+                <ul class="dropdown__listStyle">
+                    <li><a href="#">PCB: step 1</a></li>
+                    <br>
+                    <li><a href="#">PCB: step 2</a></li>
+                    <br>
+                    <li><a href="#">PCB: step 3</a></li>
+                </ul>
+            </div>
+            
+            <div id="sidebar__solarPanel" class="sidebar__parts" onclick="solarPanelDropDownContent()">
+                <p class="sidebar__parts--txt">Solar panel Replacement</p>
+                <div class="sidebar__parts--icon">X</div>
+                <div class="sidebar__parts--arrow">V</div>
+            </div>
+            <div id="solarPanel__dropdown" class="sidebar__dropdown">
+                <ul class="dropdown__listStyle">
+                    <li><a href="#">Solarpanel: step 1</a></li>
+                    <br>
+                    <li><a href="#">Solarpanel: step 2</a></li>
+                    <br>
+                    <li><a href="#">Solarpanel: step 3</a></li>
+                </ul>
+            </div>
+            
+            <div id="sidebar__led" class="sidebar__parts" onclick="ledDropDownContent()">
+                <p class="sidebar__parts--txt">LED Replacement</p>
+                <div class="sidebar__parts--icon">X</div>
+                <div class="sidebar__parts--arrow">V</div> 
+            </div>
+            <div id="led__dropdown" class="sidebar__dropdown">
+                <ul class="dropdown__listStyle">
+                    <li><a href="#">LED: step 1</a></li>
+                    <br>
+                    <li><a href="#">LED: step 2</a></li>
+                    <br>
+                    <li><a href="#">LED: step 3</a></li>
+                </ul>
+            </div>
+            
+
+        </div>
+
+        <script src="/js/sidebar.js"></script>
+
+    </body>
+</html>
