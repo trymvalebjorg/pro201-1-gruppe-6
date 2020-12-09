@@ -1,0 +1,22 @@
+.btn{
+
+outline:none; /* Removes unwanted edges from button */
+margin: 2em auto; /* Adds 2em margin */
+border: none; 
+height: 50px;
+width: 50px;
+border-radius: 100%; /* Adds round edges to the button (circle) */
+padding:1em; /*Adds some space on the inside */
+background: #11998e; /* Fallback for old browsers */
+background: -webkit-linear-gradient(to left, #38ef7d, #11998e); /* Browsers */
+color: #ffffff;
+box-shadow: 0 10px 10px 0 rgba(0,0,0,0.30); /* Adds shaddow element */
+cursor:pointer; /* Specify that the button is clickable */
+transition: transform 400ms; /* Makes progress bar slow and smooth */
+text-align: center;
+}
+
+
+.btn:hover {
+    transform: translateY(-10px); /* Makes button go upwards a bit, can be removed */
+}
