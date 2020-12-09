@@ -18,7 +18,7 @@ body {
     border-radius: 10px;
 }
 
--text {
+.text {
     margin: 2em auto;
 }
 
@@ -29,7 +29,15 @@ body {
     border-radius: 10px;
 }
 
-.bar
+.bar.bar {
+    background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #0575E6, #00F260); /* Browsers */
+    height: 10px;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 400ms;
+}
 
 
 

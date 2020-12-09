@@ -1,6 +1,7 @@
 var btn= document.getElementById('btn');
 var bar= document.getElementById('bar');
 var txt= document.getElementById('text');
+var count= 0;
 
 // Listen for an event on the button
 
