@@ -23,7 +23,7 @@ X. Media Queries
 	--color-primary: #405c6a;
 	--color-secondary: #9fd18b;
 	--color-tertiary: #fff;
-	--color-fouritary: #94c5bb;
+	--color-four: #94c5bb;
 	--color-error: #d18b8b;
 
 	font-size: 62.5%; /* 1rem = 10px */
@@ -127,12 +127,12 @@ main {
 [6. Footer]
 ------------------------------------------------------------------*/
 footer {
-	background-color: var(--color-fouritary);
+	background-color: var(--color-primary);
 	height: 5rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--color-tertiary);
+	color: var(--color-four);
 }
 
 /*------------------------------------------------------------------
