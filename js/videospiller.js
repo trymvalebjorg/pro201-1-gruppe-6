@@ -13,6 +13,7 @@ btnPlay.addEventListener("click" ,vidAction);
 btnPause.addEventListener("click", vidAction);
 btnStop.addEventListener("click", vidAction);
 btnNext.addEventListener("click", nextVideo);
+btnPrev.addEventListener("click", prevVideo);
 containerVideo.addEventListener("ended", vidEnded);
 
 //Videos-array
@@ -69,6 +70,16 @@ function vidEnded() {
 }
 
 function nextVideo() {
+    if(videosPlaying < 1) {
+        videosPlaying++;
+    } else {
+        videosPlaying = 0;
+    }
+    containerVideo.src = "videoer/" + videos[videosPlaying];
+    vidNumOut.innerHTML = (videosPlaying+1) +"/2";
+}
+
+function prevVideo() {
     if(videosPlaying < 1) {
         videosPlaying++;
     } else {
