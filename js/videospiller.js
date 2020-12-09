@@ -4,6 +4,7 @@ const btnPlay = document.getElementById("playButtons__btnPlay");
 const btnPause = document.getElementById("playButtons__btnPause");
 const btnStop = document.getElementById("playButtons__btnStop");
 const btnNext = document.getElementById("playButtons__btnNext");
+const btnPrev = document.getElementById("playButtons__btnPrevious");
 const timeOut = document.getElementById("container__timeOut");
 const vidNumOut = document.getElementById("container__vidNum");
 
