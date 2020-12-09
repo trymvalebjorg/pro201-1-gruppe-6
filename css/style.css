@@ -84,7 +84,7 @@ a {
 }
 
 .show {
-	display: block;
+	display: block !important;
 }
 
 .flip {
@@ -224,40 +224,48 @@ footer {
 [8. Læringsplatform ]
 ------------------------------------------------------------------*/
 .platform__sidebar {
-	display: grid;
-	grid-template-rows: auto;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+
+.sidebar__parts {
+	display: flex;
+	align-items: center;
+	height: 5rem;
+	background-color: var(--color-primary);
+	color: var(--color-tertiary);
+	padding: 1rem;
+}
+
+.sidebar__parts--icon {
+	margin: 1.5rem;
+	font-size: 3rem;
+}
+
+.sidebar__parts--arrow {
+	font-size: 2rem;
+	margin-left: auto;
+	margin-right: 10%;
 }
 
 .sidebar__dropdown {
 	background-color: #617e8b;
 	display: none;
 	z-index: 1;
+	font-size: 1.7rem;
 }
 
 .sidebar__dropdown ul {
 	list-style-type: none;
 }
 
-.sidebar__parts {
-	display: flex;
-	align-items: center;
-	margin-top: 1rem;
-	border-radius: 0.1rem;
-	background-color: var(--color-primary);
+.sidebar__dropdown ul li {
+	margin: 1rem;
+}
+
+.sidebar__dropdown ul li a {
 	color: var(--color-tertiary);
-}
-
-.sidebar__parts--txt {
-	font-size: 1.2rem;
-}
-
-.sidebar__parts--icon {
-	margin: 1.5rem;
-	font-size: 2rem;
-}
-
-.sidebar__parts--arrow {
-	margin: auto;
 }
 
 /*------------------------------------------------------------------
