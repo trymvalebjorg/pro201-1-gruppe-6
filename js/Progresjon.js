@@ -9,7 +9,7 @@ var txt= document.getElementById('text');
 btn.addEventListener('click', ()=>{
     bar.style.width = count + '%';
     txt.innerHTML = count + '%';
-    if (count ===100){
+    if(count ===100){
         count = 0;
     }
     else{
