@@ -15,7 +15,7 @@ X. Media Queries
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
-[0. Imports, dependencies]
+[1. Root / Colors / Variables]
 ------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
@@ -84,6 +84,7 @@ body {
 main {
 	padding: 0.7rem 2rem; /* Main container */
 }
+
 /*------------------------------------------------------------------
 [5. Header / Navigation]
 ------------------------------------------------------------------*/
@@ -155,9 +156,13 @@ footer {
 	outline: none;
 }
 
+/* Button Sizes */
+
 .btn--medium {
 	padding: 1rem 2rem;
 }
+
+/* Button Colors */
 
 .btn--primary {
 	background-color: var(--color-primary);
