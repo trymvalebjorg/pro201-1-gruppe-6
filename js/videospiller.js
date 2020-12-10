@@ -94,7 +94,6 @@ function nextVideo() {
         currentStep++;
         highlightCurrentStep(currentStep);
     }
-
     containerVideo.src = "videoer/" + videos[videosPlaying];
     vidNumOut.innerHTML = `Video: ${(videosPlaying+1)} / ${numberOfSteps}`;
 }
