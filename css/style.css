@@ -26,7 +26,8 @@ X. Media Queries
 	--color-four: #94c5bb;
 	--color-error: #d18b8b;
 
-	font-size: 62.5%; /* 1rem = 10px */
+	font-size: 62.5%;
+	/* 1rem = 10px */
 }
 
 /*------------------------------------------------------------------
@@ -91,7 +92,8 @@ a {
 [4. Layouts ]
 ------------------------------------------------------------------*/
 main {
-	padding: 1rem 5rem; /* Main container */
+	padding: 1rem 5rem;
+	/* Main container */
 }
 
 main {
@@ -311,13 +313,14 @@ footer {
 }
 
 .bar {
-	background: #00f260; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to left,
-		#0575e6,
-		#00f260
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #0575e6, #00f260); /* Browsers */
+	background: #00f260;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to left,
+			#0575e6,
+			#00f260);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #0575e6, #00f260);
+	/* Browsers */
 	height: 10px;
 	width: 0%;
 	border-radius: 10px;
@@ -329,7 +332,8 @@ footer {
 ------------------------------------------------------------------*/
 @media only screen and (max-width: 1400px) {
 	main {
-		padding: 1rem 1rem; /* Main container */
+		padding: 1rem 1rem;
+		/* Main container */
 	}
 
 	.platform__video {
