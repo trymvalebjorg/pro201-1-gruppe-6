@@ -59,10 +59,6 @@ p {
 	margin: 0;
 }
 
-main {
-	height: calc(100vh - 113px - 0.7rem - 0.7rem);
-}
-
 body {
 	margin: 0;
 	padding: 0;
@@ -95,7 +91,11 @@ a {
 [4. Layouts ]
 ------------------------------------------------------------------*/
 main {
-	padding: 0.7rem 2rem; /* Main container */
+	padding: 1rem 5rem; /* Main container */
+}
+
+main {
+	height: calc(100vh - 113px - 1rem - 1rem);
 }
 
 /*------------------------------------------------------------------
@@ -183,6 +183,7 @@ footer {
 
 .btn--medium {
 	padding: 1rem 2rem;
+	margin: 0 1rem;
 }
 
 /* Button Colors */
@@ -268,25 +269,82 @@ footer {
 	color: var(--color-tertiary);
 }
 
+.platform__video {
+	width: 100%;
+	max-width: 120rem;
+	max-height: 72rem;
+
+	justify-self: center;
+}
+
+#platform__video__container__video {
+	width: 100%;
+	max-width: 120rem;
+	max-height: 72rem;
+}
+
 .playButtons {
 	display: flex;
+	margin-top: 1rem;
 }
 
 #playButtons__btnNext {
 	margin-left: auto;
 }
 
-#playButtons__btnPlay {
+#playButtons__btnPause {
 	margin-left: auto;
 }
 
-#container__video {
+#container__vidNum {
+	text-align: right;
+	font-size: 1.5rem;
+	margin-top: 0.5rem;
+}
+
+.bar-container {
+	background: #f0f0f0;
+	height: 10px;
 	width: 100%;
+	border-radius: 10px;
+	margin-top: 0.5rem;
+}
+
+.bar {
+	background: #00f260; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to left,
+		#0575e6,
+		#00f260
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #0575e6, #00f260); /* Browsers */
+	height: 10px;
+	width: 0%;
+	border-radius: 10px;
+	transition: width 400ms;
 }
 
 /*------------------------------------------------------------------
 [X. Media Queries]
 ------------------------------------------------------------------*/
+@media only screen and (max-width: 1400px) {
+	main {
+		padding: 1rem 1rem; /* Main container */
+	}
+
+	.platform__video {
+		width: 100%;
+		max-width: 128rem;
+		max-height: 72rem;
+	}
+
+	#platform__video__container__video {
+		width: 100%;
+		max-width: 124rem;
+		max-height: 72rem;
+	}
+}
+
 @media only screen and (max-width: 630px) {
 	.nav__hamburger {
 		display: block;

@@ -12,34 +12,13 @@ body {
 .container {
 	background: #fafafa;
 	height: 10px;
-	width: 100vw;
+	width: ;
 	margin: 0 auto;
 	border-radius: 10px;
 }
 
 .text {
 	margin: 2em auto;
-}
-
-.bar-container {
-	background: #f0f0f0;
-	height: 10px;
-	width: 100%;
-	border-radius: 10px;
-}
-
-.bar.bar {
-	background: #00f260; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to left,
-		#0575e6,
-		#00f260
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #0575e6, #00f260); /* Browsers */
-	height: 10px;
-	width: 0%;
-	border-radius: 10px;
-	transition: width 400ms;
 }
 
 .btn {

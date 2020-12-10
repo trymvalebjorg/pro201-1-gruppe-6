@@ -1,5 +1,5 @@
 //HTML-elements
-const containerVideo = document.getElementById("container__video");
+const containerVideo = document.getElementById("platform__video__container__video");
 const btnPlay = document.getElementById("playButtons__btnPlay");
 const btnPause = document.getElementById("playButtons__btnPause");
 const btnStop = document.getElementById("playButtons__btnStop");
@@ -7,8 +7,9 @@ const btnNext = document.getElementById("playButtons__btnNext");
 const btnPrev = document.getElementById("playButtons__btnPrev");
 const timeOut = document.getElementById("container__timeOut");
 const vidNumOut = document.getElementById("container__vidNum");
-const stepsUl = document.querySelector('.sidebar__dropdown__steps');
-const steps = stepsUl.getElementsByTagName('li');
+
+
+const steps = document.querySelectorAll('.sidebar__dropdown__steps > li');
 
 
 //Add EventListener
@@ -20,14 +21,13 @@ btnNext.addEventListener("click", nextVideo);
 containerVideo.addEventListener("ended", vidEnded);
 
 //Videos-array
-const videos  = ["Meet SunBell Smart!.mp4", "Møt Sunbell Smart.mp4", "BRIG0001.mp4"];
+const videos  = ["Meet SunBell Smart!.mp4", "Møt Sunbell Smart.mp4", "BRIG0001.mp4", "Meet SunBell Smart!.mp4", "Møt Sunbell Smart.mp4", "BRIG0001.mp4", "Meet SunBell Smart!.mp4", "Møt Sunbell Smart.mp4", "BRIG0001.mp4"];
 
 // Current step
 let currentStep = 0;
-console.log(currentStep);
 
 //Steps
-let numberOfSteps = videos.length;
+let numberOfSteps = steps.length;
 
 //Timer and videos playing
 let timer = null;
@@ -38,6 +38,8 @@ function highlightCurrentStep() {
     for(const step of steps) {
         step.style.fontWeight = '400';
     }
+
+    steps[currentStep].closest('div').classList.add('show');
     steps[currentStep].style.fontWeight = '600';
 }
 
@@ -89,17 +91,17 @@ function vidEnded() {
 }
 
 function nextVideo() {
-    if (videosPlaying < videos.length - 1) {
+    if (videosPlaying < numberOfSteps - 1) {
         videosPlaying++;
         currentStep++;
         highlightCurrentStep(currentStep);
     }
     containerVideo.src = "videoer/" + videos[videosPlaying];
-    vidNumOut.innerHTML = `Video: ${(videosPlaying+1)} / ${numberOfSteps}`;
+    vidNumOut.innerHTML = `Total Steps: ${(videosPlaying+1)} / ${numberOfSteps}`;
 }
 
 function prevVideo() {
-    if (videosPlaying < videos.length && currentStep > 0 ) {
+    if (videosPlaying < numberOfSteps && currentStep > 0 ) {
         videosPlaying--;
         currentStep--;
         highlightCurrentStep(currentStep);
@@ -109,6 +111,6 @@ function prevVideo() {
     }
 
     containerVideo.src = "videoer/" + videos[videosPlaying];
-    vidNumOut.innerHTML = `Video: ${(videosPlaying+1)} / ${numberOfSteps}`;
+    vidNumOut.innerHTML = `Total Steps: ${(videosPlaying+1)} / ${numberOfSteps}`;
 }
 
