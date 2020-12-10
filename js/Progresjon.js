@@ -7,13 +7,12 @@ var count = 0;
 
 // Increase the width of the bar by 10%
 
-btn.addEventListener('click', ()=>{
+btn.addEventListener('click', ()=> {
     bar.style.width = count + '%';
     txt.innerHTML = count + '%';
-    if(count ===100){
+    if(count === 100){
         count = 0;
-    }
-    else{
+    } else {
         count = count + 10;
     }
 });
