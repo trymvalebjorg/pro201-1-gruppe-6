@@ -4,6 +4,7 @@ const btnPlay = document.getElementById("playButtons__btnPlay");
 const btnPause = document.getElementById("playButtons__btnPause");
 const btnStop = document.getElementById("playButtons__btnStop");
 const btnNext = document.getElementById("playButtons__btnNext");
+const btnPrev = document.getElementById("playButons__btnPrev");
 const timeOut = document.getElementById("container__timeOut");
 const vidNumOut = document.getElementById("container__vidNum");
 
@@ -11,6 +12,7 @@ const vidNumOut = document.getElementById("container__vidNum");
 btnPlay.addEventListener("click" ,vidAction);
 btnPause.addEventListener("click", vidAction);
 btnStop.addEventListener("click", vidAction);
+btnPrev.addEventListener("click", prevVideo);
 btnNext.addEventListener("click", nextVideo);
 containerVideo.addEventListener("ended", vidEnded);
 
@@ -24,14 +26,14 @@ let videosPlaying = 0;
 //Functions
 function vidAction(event) {
     switch(event.target.id) {
-        case "btnPlay":
+        case "playButtons__btnPlay":
             playVideo();
             timer = setInterval(update, 100);
             break;
-            case "btnPause":
+            case "playButtons__btnPause":
                 containerVideo.pause();
                 break;
-                case "btnStop":
+                case "playButtons__btnStop":
                     containerVideo.pause();
                     containerVideo.currentTime = 0;
                     break;
@@ -68,6 +70,16 @@ function vidEnded() {
 }
 
 function nextVideo() {
+    if(videosPlaying < 1) {
+        videosPlaying++;
+    } else {
+        videosPlaying = 0;
+    }
+    containerVideo.src = "videoer/" + videos[videosPlaying];
+    vidNumOut.innerHTML = (videosPlaying+1) +"/2";
+}
+
+function prevVideo() {
     if(videosPlaying < 1) {
         videosPlaying++;
     } else {
