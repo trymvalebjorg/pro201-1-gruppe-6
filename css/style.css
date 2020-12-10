@@ -268,25 +268,20 @@ footer {
 	color: var(--color-tertiary);
 }
 
-#playButtons {
-	padding: 10px;
-	border: 1px solid gray;
-	border-radius: 5px;
-	margin-bottom: 20px;
+.playButtons {
+	display: flex;
+}
+
+#playButtons__btnNext {
+	margin-left: auto;
+}
+
+#playButtons__btnPlay {
+	margin-left: auto;
 }
 
 #container__video {
 	width: 100%;
-}
-
-#container__vidNum {
-	float: right;
-}
-
-button {
-	padding: 10px;
-	width: 22%;
-	margin: 10px;
 }
 
 /*------------------------------------------------------------------

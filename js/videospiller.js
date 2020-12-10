@@ -4,9 +4,12 @@ const btnPlay = document.getElementById("playButtons__btnPlay");
 const btnPause = document.getElementById("playButtons__btnPause");
 const btnStop = document.getElementById("playButtons__btnStop");
 const btnNext = document.getElementById("playButtons__btnNext");
-const btnPrev = document.getElementById("playButons__btnPrev");
+const btnPrev = document.getElementById("playButtons__btnPrev");
 const timeOut = document.getElementById("container__timeOut");
 const vidNumOut = document.getElementById("container__vidNum");
+const stepsUl = document.querySelector('.sidebar__dropdown__steps');
+const steps = stepsUl.getElementsByTagName('li');
+
 
 //Add EventListener
 btnPlay.addEventListener("click" ,vidAction);
@@ -17,13 +20,29 @@ btnNext.addEventListener("click", nextVideo);
 containerVideo.addEventListener("ended", vidEnded);
 
 //Videos-array
-const videos  = ["Meet SunBell Smart!.mp4", "Møt Sunbell Smart.mp4"];
+const videos  = ["Meet SunBell Smart!.mp4", "Møt Sunbell Smart.mp4", "BRIG0001.mp4"];
+
+// Current step
+let currentStep = 0;
+console.log(currentStep);
+
+//Steps
+let numberOfSteps = videos.length;
 
 //Timer and videos playing
 let timer = null;
 let videosPlaying = 0;
 
 //Functions
+function highlightCurrentStep() {
+    for(const step of steps) {
+        step.style.fontWeight = '400';
+    }
+    steps[currentStep].style.fontWeight = '600';
+}
+
+highlightCurrentStep(currentStep);
+
 function vidAction(event) {
     switch(event.target.id) {
         case "playButtons__btnPlay":
@@ -70,22 +89,27 @@ function vidEnded() {
 }
 
 function nextVideo() {
-    if(videosPlaying < 1) {
+    if (videosPlaying < videos.length - 1) {
         videosPlaying++;
-    } else {
-        videosPlaying = 0;
+        currentStep++;
+        highlightCurrentStep(currentStep);
     }
+
     containerVideo.src = "videoer/" + videos[videosPlaying];
-    vidNumOut.innerHTML = (videosPlaying+1) +"/2";
+    vidNumOut.innerHTML = `Video: ${(videosPlaying+1)} / ${numberOfSteps}`;
 }
 
 function prevVideo() {
-    if(videosPlaying < 1) {
-        videosPlaying++;
-    } else {
+    if (videosPlaying < videos.length && currentStep > 0 ) {
+        videosPlaying--;
+        currentStep--;
+        highlightCurrentStep(currentStep);
+    } else if(currentStep < 0) {
         videosPlaying = 0;
+        currentStep = 0;
     }
+
     containerVideo.src = "videoer/" + videos[videosPlaying];
-    vidNumOut.innerHTML = (videosPlaying+1) +"/2";
+    vidNumOut.innerHTML = `Video: ${(videosPlaying+1)} / ${numberOfSteps}`;
 }
 
