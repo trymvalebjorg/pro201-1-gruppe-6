@@ -25,6 +25,7 @@ X. Media Queries
 	--color-tertiary: #fff;
 	--color-four: #94c5bb;
 	--color-error: #d18b8b;
+	--color-pause: #d1d079;
 
 	font-size: 62.5%;
 	/* 1rem = 10px */
@@ -177,6 +178,7 @@ footer {
 	font-weight: 600;
 }
 
+
 .btn:focus {
 	outline: none;
 }
@@ -214,12 +216,23 @@ footer {
 
 .btn--error {
 	background-color: var(--color-error);
-	color: var(--color-tertiary);
+	color: var(--color-primary);
 }
 
 .btn--error:hover,
 .btn--error:focus {
 	background-color: var(--color-error);
+	filter: brightness(1.2);
+}
+
+.btn--pause {
+	background-color: var(--color-pause);
+	color: var(--color-primary);
+}
+
+.btn--pause:hover,
+.btn--pause:focus {
+	background-color: var(--color-pause);
 	filter: brightness(1.2);
 }
 
@@ -340,12 +353,15 @@ footer {
 		width: 100%;
 		max-width: 128rem;
 		max-height: 72rem;
+		min-width: 10rem;
 	}
 
 	#platform__video__container__video {
 		width: 100%;
 		max-width: 124rem;
 		max-height: 72rem;
+		min-width: 10rem;
+		min-height: 10rem; 
 	}
 }
 
@@ -377,5 +393,32 @@ footer {
 		background-color: var(--color-primary);
 		margin: 0;
 		padding: 0;
+
+		z-index: 10; 
 	}
+
+	.btn span {
+		display: none;
+	}
+
+	.btn {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (max-width: 965px) {
+
+	.platform {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-column-gap: 1rem;
+		grid-row-gap: 2rem;
+	}
+
+	.btn--medium {
+		padding: 1rem 1rem;
+		margin: 0 1rem;
+	}
+	
+
 }

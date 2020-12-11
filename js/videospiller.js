@@ -34,6 +34,9 @@ let timer = null;
 let videosPlaying = 0;
 
 //Functions
+
+
+
 function highlightCurrentStep() {
     for (const step of steps) {
         step.style.fontWeight = '400';
@@ -49,7 +52,7 @@ function vidAction(event) {
     switch (event.target.id) {
         case "playButtons__btnPlay":
             playVideo();
-            timer = setInterval(update, 100);
+            // timer = setInterval(update, 100);
             break;
         case "playButtons__btnPause":
             containerVideo.pause();
@@ -63,12 +66,12 @@ function vidAction(event) {
 
 function playVideo() {
     containerVideo.play();
-    timer = setInterval(update, 100);
+    // timer = setInterval(update, 100);
 }
 
-function update() {
-    timeOut.innerHTML = "Time: " + myTime(containerVideo.currentTime) + "/" + myTime(containerVideo.duration);
-}
+// function update() {
+//     timeOut.innerHTML = "Time: " + myTime(containerVideo.currentTime) + "/" + myTime(containerVideo.duration);
+// }
 
 function myTime(time) {
     var hr = ~~(time / 3600);
@@ -113,3 +116,4 @@ function prevVideo() {
     containerVideo.src = "videoer/" + videos[videosPlaying];
     vidNumOut.innerHTML = `Total Steps: ${(videosPlaying+1)} / ${numberOfSteps}`;
 }
+
